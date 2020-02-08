@@ -14,7 +14,6 @@ import { ProfileModule } from './app/profile/profile.module';
     CustomerModule,
     PostsModule,
     CarsModule,
-    CommentsModule,
     ProfileModule
   ],
   controllers: [AppController],
