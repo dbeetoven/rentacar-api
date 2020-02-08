@@ -7,7 +7,7 @@ import { CustomerDTO, Customer } from 'src/models';
 @Injectable()
 export class CustomerService implements AbstractService<CustomerDTO, Customer> {
   constructor(
-    @InjectModel('Customer') private readonly customerModel: Model<Customer>,
+    @InjectModel('Customer') private readonly customerModel: Model<Customer>
   ) {}
 
   async findAll(): Promise<Customer[]> {

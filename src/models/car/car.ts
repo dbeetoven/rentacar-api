@@ -1,11 +1,11 @@
 
-import { Document } from 'mongoose';
+import { Document, SchemaType } from 'mongoose';
 
 export class CarDTO {
     readonly carBrand: String;
     readonly carModel: String;
     readonly color: String;
-    readonly images:[String];
+    readonly images:String [];
     readonly year: String;
     readonly patent: String;
     readonly insurranceType: String;
@@ -29,23 +29,11 @@ export class CarDTO {
     readonly insurranceType: string;
     readonly hasGnc: boolean;
     readonly hasRented:boolean;
-    readonly ownerId:string;
-    readonly renterId:string;
+    readonly ownerId?:any;
+    readonly renterId?:any;
     readonly km: string;
     readonly observation: string;
     readonly created_at: string;
     readonly lastUpdate_at: string
   }
-  
-  export interface Customer extends Document {
-    readonly lastNname: string;
-    readonly username: string;
-    readonly email: string;
-    readonly phone: string;
-    readonly birthday: string;
-    readonly docType: string;
-    readonly docNumber: number;
-    readonly address: string;
-    readonly created_at: Date;
-    readonly lastUpdate_at: Date;
-}
+
