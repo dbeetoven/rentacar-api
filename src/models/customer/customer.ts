@@ -11,6 +11,7 @@ export class CustomerDTO {
   readonly docType: String;
   readonly docNumber: Number;
   readonly address: String;
+  readonly biografy:String;
   readonly created_at: Date;
   readonly lastUpdate_at: Date;
 }
@@ -24,6 +25,7 @@ export interface Customer extends Document {
     readonly docType: string;
     readonly docNumber: number;
     readonly address: string;
+    readonly biografy:string
     readonly created_at: Date;
     readonly lastUpdate_at: Date;
 }
