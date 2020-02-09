@@ -67,3 +67,7 @@ typings/
 
 # Serverless directories
 .serverless
+
+# Environment
+.env
+.env.production
