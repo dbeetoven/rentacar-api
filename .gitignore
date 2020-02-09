@@ -69,5 +69,4 @@ typings/
 .serverless
 
 # Environment
-.env
-.env.production
+/*.env
