@@ -8,6 +8,7 @@ export class PostDTO {
   readonly price: Number;
   readonly paymentPeriod: String;
   readonly insuredAmount?: Number;
+  readonly modality:String
   readonly created_at: Date;
   readonly update_at: Date;
   readonly comments: [String];
