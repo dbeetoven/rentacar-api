@@ -7,6 +7,9 @@ import { CarsModule } from './app/cars/cars.module';
 import { CustomerModule } from './app/customer/customer.module';
 import { PostsModule } from './app/posts/posts.module';
 import { ProfileModule } from './app/profile/profile.module';
+import { ConfigModule } from './config/config.module';
+import { ConfigService } from './config/config.service';
+import { Configuration } from './config/config.keys';
 
 @Module({
   imports: [
@@ -19,8 +22,17 @@ import { ProfileModule } from './app/profile/profile.module';
     CarsModule,
     ProfileModule,
     AuthModule,
+    ConfigModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+  static port:number | string;
+
+  constructor(private readonly _configService:ConfigService){
+     AppModule.port= this._configService.get(Configuration.PORT);
+     console.log(AppModule.port);
+     
+  }
+}
